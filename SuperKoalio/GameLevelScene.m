@@ -40,6 +40,7 @@
     self.player.position = CGPointMake(100, 50);
     self.player.zPosition = 15;
     [self.map addChild:self.player];
+    self.userInteractionEnabled = YES;
   }
   return self;
 }
@@ -138,4 +139,47 @@
     }
   player.position = player.desiredPosition;
 }
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  for (UITouch *touch in touches) {
+    CGPoint touchLocation = [touch locationInNode:self];
+    if(touchLocation.x > self.size.width/2.0) {
+      self.player.mightAsWellJump = YES;
+    }
+    else {
+      self.player.forwardMarch = YES;
+    }
+  }
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+  for (UITouch *touch in touches) {
+    float halfWidth = self.size.width/2.0;
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    //get previous touch and convert it to node space
+    CGPoint previousTouchLocation = [touch previousLocationInNode:self];
+    
+    if(touchLocation.x > halfWidth && previousTouchLocation.x <= halfWidth) {
+      self.player.forwardMarch = NO;
+      self.player.mightAsWellJump = YES;
+    } else if (previousTouchLocation.x > halfWidth && touchLocation.x <= halfWidth) {
+      self.player.forwardMarch = YES;
+      self.player.mightAsWellJump = NO;
+    }
+  }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+  for (UITouch *touch in touches) {
+    CGPoint touchLocation = [touch locationInNode:self];
+    if(touchLocation.x < self.size.width/2.0){
+      self.player.forwardMarch = NO;
+    } else {
+      self.player.mightAsWellJump = NO;
+    }
+  }
+}
+
 @end
