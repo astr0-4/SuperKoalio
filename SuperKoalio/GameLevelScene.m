@@ -37,7 +37,7 @@
     // loads the level1 map and adds it to the layer
     self.map = [JSTileMap mapNamed:@"level1.tmx"]; //assign map object to our map
     self.walls = [self.map layerNamed:@"walls"];
-    self.hazards = [self.map layerNamed:@"hazard"];
+    self.hazards = [self.map layerNamed:@"hazards"];
     
     [self addChild:self.map];
     self.player = [[Player alloc] initWithImageNamed: @"koalio_stand"];

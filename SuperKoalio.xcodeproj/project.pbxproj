@@ -42,6 +42,8 @@
 		F275B6E5186E25C1009F6E6B /* SKTTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F275B6DC186E25C1009F6E6B /* SKTTimingFunctions.m */; };
 		F275B6F0186E2749009F6E6B /* tileSet.png in Resources */ = {isa = PBXBuildFile; fileRef = F275B6EE186E2749009F6E6B /* tileSet.png */; };
 		F275B6F1186E2749009F6E6B /* tileSet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F275B6EF186E2749009F6E6B /* tileSet@2x.png */; };
+		FA9749A11AC3699100DED3E9 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = FA97499F1AC3699000DED3E9 /* replay.png */; };
+		FA9749A21AC3699100DED3E9 /* replay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9749A01AC3699100DED3E9 /* replay@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		F275B6DD186E25C1009F6E6B /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
 		F275B6EE186E2749009F6E6B /* tileSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileSet.png; sourceTree = "<group>"; };
 		F275B6EF186E2749009F6E6B /* tileSet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tileSet@2x.png"; sourceTree = "<group>"; };
+		FA97499F1AC3699000DED3E9 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = replay.png; path = sprites.atlas/replay.png; sourceTree = "<group>"; };
+		FA9749A01AC3699100DED3E9 /* replay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "replay@2x.png"; path = "sprites.atlas/replay@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,8 @@
 		F275B6C2186E21EB009F6E6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA97499F1AC3699000DED3E9 /* replay.png */,
+				FA9749A01AC3699100DED3E9 /* replay@2x.png */,
 				F275B6C0186E21D1009F6E6B /* Audio */,
 				F275B6C1186E21D9009F6E6B /* TMX Files */,
 				F275B6B6186E21AB009F6E6B /* sprites.atlas */,
@@ -369,6 +375,8 @@
 				F275B6F1186E2749009F6E6B /* tileSet@2x.png in Resources */,
 				F275B67D186E0B06009F6E6B /* InfoPlist.strings in Resources */,
 				F275B690186E0B06009F6E6B /* Images.xcassets in Resources */,
+				FA9749A11AC3699100DED3E9 /* replay.png in Resources */,
+				FA9749A21AC3699100DED3E9 /* replay@2x.png in Resources */,
 				F275B6BD186E21CB009F6E6B /* jump.wav in Resources */,
 				F275B6BC186E21CB009F6E6B /* hurt.wav in Resources */,
 				F275B6F0186E2749009F6E6B /* tileSet.png in Resources */,
