@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SuperKoalio/GameLevelScene.m"
-            timestampString = "448228543.731708"
+            timestampString = "449003211.714692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-update:"
             landmarkType = "5">
          </BreakpointContent>
