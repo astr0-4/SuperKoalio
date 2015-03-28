@@ -47,7 +47,7 @@
     CGPoint maxMovement = CGPointMake(120.0, 250.0);
     self.velocity = CGPointMake(Clamp(self.velocity.x, minMovement.x, maxMovement.x), Clamp(self.velocity.y, minMovement.y, maxMovement.y));
     
-    CGPoint velocityStep = CGPointMultiplyScalar(self.velocity, delta);
+    CGPoint velocityStep = CGPointMultiplyScalar(self.velocity, delta*.9);
     
     self.desiredPosition = CGPointAdd(self.position, velocityStep);
     }

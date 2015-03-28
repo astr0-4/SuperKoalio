@@ -61,12 +61,12 @@
   [self.player update:delta];
   [self checkForAndResolveCollisionsForPlayer:self.player forLayer:self.walls];
   [self setViewpointCenter:self.player.position];
-
+  [self checkForWin];
 }
 
 -(CGRect)tileRectFromTileCoords:(CGPoint)tileCoords {
   float levelHeightInPixels = self.map.mapSize.height * self.map.tileSize.height;
-  CGPoint origin = CGPointMake(tileCoords.x * self.map.tileSize.width, levelHeightInPixels - ((tileCoords.y +1) * self.map.tileSize.height));
+  CGPoint origin = CGPointMake(tileCoords.x * self.map.tileSize.width, levelHeightInPixels - ((tileCoords.y + 1) * self.map.tileSize.height));
   return CGRectMake(origin.x, origin.y, self.map.tileSize.width, self.map.tileSize.height);
 }
 
@@ -77,15 +77,20 @@
 
 -(void)checkForAndResolveCollisionsForPlayer:(Player *)player forLayer:(TMXLayer *)layer {
   [self handleHazardCollisions:self.player];
+  
   NSInteger indices[8] = {7, 1, 3, 5, 0, 2, 6, 8};
   player.onGround = NO;
   for (NSUInteger i = 0; i < 8; i++) {
     NSInteger tileIndex = indices[i];
     
     CGRect playerRect = [player collisionBoundingBox];
-    
     CGPoint playerCoord = [layer coordForPoint:player.desiredPosition ];
     
+    if (playerCoord.y >= self.map.mapSize.height - 2) {
+          [self gameOver:0];
+          return;
+      }
+      
     NSInteger tileColumn = tileIndex % 3;
     NSInteger tileRow = tileIndex / 3;
     CGPoint tileCoord = CGPointMake(playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
@@ -139,7 +144,7 @@
             else {
               intersectionWidth = -intersection.size.width;
             }
-            player.desiredPosition = CGPointMake(player.desiredPosition.x + intersection.size.width, player.desiredPosition.y);
+            player.desiredPosition = CGPointMake(player.desiredPosition.x + intersectionWidth, player.desiredPosition.y);
             }
           }
         }
@@ -203,6 +208,7 @@
 
 -(void)handleHazardCollisions:(Player *)player
 {
+  if (self.gameOver) return;
   NSInteger indices[8] = {7, 1, 3, 5, 0, 2, 6, 8};
   
   for(NSUInteger i = 0; i < 8; i++) {
@@ -261,6 +267,12 @@
   [[self.view viewWithTag:321] removeFromSuperview];
   //6
   [self.view presentScene:[[GameLevelScene alloc] initWithSize:self.size]];
+}
+
+-(void)checkForWin {
+    if(self.player.position.x > 3230.0) {
+        [self gameOver:1];
+    }
 }
 
 @end
