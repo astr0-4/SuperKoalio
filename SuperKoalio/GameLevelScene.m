@@ -35,7 +35,8 @@
     self.backgroundColor = [SKColor colorWithRed:.4 green:.4 blue:.95 alpha:1.0];
     
     // loads the level1 map and adds it to the layer
-    self.map = [JSTileMap mapNamed:@"level1.tmx"]; //assign map object to our map
+    //self.map = [JSTileMap mapNamed:@"level1.tmx"]; //assign map object to our map
+    self.map = [JSTileMap mapNamed:@"level2.tmx"];
     self.walls = [self.map layerNamed:@"walls"];
     self.hazards = [self.map layerNamed:@"hazards"];
     
@@ -239,7 +240,7 @@
   if(won) {
     gameText = @"You Won!";
   } else {
-    gameText = @"You have died!";
+    gameText = @"You have died!";    
   }
   
   //3

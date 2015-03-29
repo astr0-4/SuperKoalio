@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="212" height="20" tilewidth="16" tileheight="16" backgroundcolor="#5dbeee" nextobjectid="1">
+ <tileset firstgid="1" name="tileSet-hd" tilewidth="16" tileheight="16">
+  <image source="tileSet.png" trans="fe80fe" width="256" height="256"/>
+ </tileset>
+ <layer name="background" width="212" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt2kWTFDEchvHG3d3dFnd3d3epwp0q3KlCFueA+wG5AQfkO+AcF+eALM4Vp3j60LVDtnfTlkmG6rfqdxom/U93Oslksaw4ceLE8ZaDOITDOKK5Fj/Zh/04oLuQOEnNTdzCbdzBXdzDfTzQWJeTcziPC7io4fpB789pnMFZ1QXGMSoP8QiP8QRP8QzP8ULxtTOE67vlKq7hOm4orsctQe/PJVzGlYjq2GvFa57psZ/RW7zDe3zAR3zCZ3yx1K5ZmcL1TYzs/iQrp6x4zTM99jP6im9W9n3Vb/yxkr9mBY2qfatzf77jB37il5V1f3TVpSK699ZRREUfvOyjxIj7qjBzso4x5GdflswzDp37ab/RvbeOIir6EHYf5WVOzrByfm91jCGnv2JNbnNAMufhVFqf4rhH9TO028+0sr+3Tvs6fnM4c4BYk9u+TJzDVI71VFqfwsTU85I8yIt8yI8CKIhCKIwiHtpQ/Qxl7Ttj27m/fn9z2JHNCUGemdimrB9RvFtuc4sd08Zd2Jh6XlIGZVEO5VEBFVEJlVHFQxuq1wev7Tv3N0hkY93PM0ucNxPblPUjyO9QMW57ZxPHna6o3nvXQV3UQ300QEM0QmM08dCG+Ayd8eRnffDTfpD1R5Yo54TE8ZvYpt2P3NZBVef5Uf9tKpWj+gykNdqgLdqhPTqgIzqhc4A2w6wTuhLlO5s4fsU2ZetgPPZTO73RB33RD/0xAAMxCINz+F5xlEDJJNT4P8WUv9fGUZPRGIOxGIfxmICJmITJLt+phuqogZqo5eE6qs4AX+IVXuONlbVnirKOKGsPsw6GqSNsH5x9UpzcMxOzMBtzMBfzMB8LsFD492loimZojhZoiVaS66g6A/T7PgWpw4Qz6KIh6zClD8Wsf/c2pVDa4/enYCqmYTpmePwsysj6sBwrsBKrsBprsBbrsF5orwu6ohu6owd6opekDlX7HL/vU5A6TNijVQ1Zhyl9cNvb1Pb4/UVYjCVYimUeP4sysj5sxTZsxw6kYyd2YTf2CO0NwVAMw3CMwEiMktSh6ozO7/sUpI5knC/KkhayDlP6EGRv42QDNmITNmOLx8+ijKwP4v8tO4pjOI4TOCm0F/R9sqOiz37fJ9Pq95qg+4LE6KzfTtg+mLA+RfEc4uhPmHnAlITtgwnrU9TP4S+EipKv
+  </data>
+ </layer>
+ <layer name="walls" width="212" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztmEkOgzAMRXPz3KDd90Ad9lWH2xTEBlUkBGI7A+9JlipEHevjHxycAwAAAAAAAAAAAKiHcyQAAAC02fP+6eld5UsXAF0g0Uet+8nPAvpG8/wi1UMtn6v8QkAauXrdh3gI1VIa+mfZSxaatLr3zJHQ6iNUS2nYj+Ne0tKlBx+N1N4/sZkupL/UvdLPNpQ79XrO/y+JNaZ4SbJXrHz0VM4/oqFRLzPfUZg/ry1eivXLFu9v/Vaa471YjrXca+tK7zlvN81834wcIy2f31tmj5dqmml84LfV2jVrA7bkeKmGvvmvwbKmHF2uQ9zc9C0vdJ15ry0kvFTSU0vrW9WkpcnLrc97J+WwWqe2mi01rj3Q4dhaStTshPL0EEfS4QcnfYJh
+  </data>
+ </layer>
+ <layer name="hazards" width="212" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt17EJADAIBMDsXzlymkwQFRHu4EtBtNFzAAAAAKgSLwAAABv4XwAA2M5NCwAAAH3iI5naqVT0XDW3CpMznOgpo2sHADDpAjZQUHE=
+  </data>
+ </layer>
+</map>
